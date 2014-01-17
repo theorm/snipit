@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+
+    <!-- apple viewport -->
+    <meta name="viewport" content="initial-scale=1,width=device-width,height=device-height,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-touch-fullscreen" content="yes">
+
+    <link rel="stylesheet" href="/base.css">
+
+    <style type="text/css" media="screen">
+      {{ snippet.css | safe }}      
+    </style>
+
+    <script src="/static/js/modernizr.min.js"></script>
+    <script src="/static/js/d3.v3.min.js"></script>
+    <script type="text/javascript" charset="utf-8" async defer>
+      function onLoad() {
+        {{ snippet.js | safe }}
+      }
+    </script>
+
+  </head>
+
+  <body onload="onLoad()">
+    <section id="container">
+      {{ snippet.html | safe }}
+    </section>
+    
+    <section id="errors">
+    {% for field, error in snippet.errors %}
+      <p>{{ field }}: {{ error }}</p>
+    {% endfor %}
+    </section>
+    
+    <section id="html">
+      {{ snippet.html }}
+    </section>
+    
+    <section id="less">
+      {{ snippet.less }}
+    </section>
+    
+    <section id="js">
+      {{ snippet.js }}
+    </section>
+    
+
+
+  </body>
+</html>

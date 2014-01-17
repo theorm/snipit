@@ -1,0 +1,36 @@
+{
+  "name": "snipit",
+  "preferGlobal": true,
+  "version": "0.0.1",
+  "author": "Roman Kalyakin <roman@kalyakin.com>",
+  "description": "Preview HTML/JS/LESS snippets in a browser.",
+  "contributors": [],
+  "bin": {
+    "snip": "./snip.js"
+  },
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/theorm/snipit.git"
+  },
+  "keywords": [
+    "cli",
+    "http",
+    "server"
+  ],
+  "dependencies": {
+    "colors": "*",
+    "express": "~3.4.8",
+    "consolidate": "~0.10.0",
+    "swig": "~1.2.2",
+    "less": "~1.6.1",
+    "watch": "~0.8.0"
+  },
+  "analyze": false,
+  "devDependencies": {},
+  "bundledDependencies": [],
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.10"
+  }
+}
